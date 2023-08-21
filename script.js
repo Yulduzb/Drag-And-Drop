@@ -18,7 +18,7 @@ items.forEach(item => {
 
 //Bu fonksiyon, öğeleri sıralamak için kullanılır 
 const initSortableList = (e) => {
-  e.preventDefault();
+  e.preventDefault();// Tarayıcının varsayılan davranışını engellemek için
   const draggingItem=sortableList.querySelector(".dragging");
 
   // sıralanabilir liste içindeki tüm öğelerden sürüklenen
@@ -28,6 +28,7 @@ const initSortableList = (e) => {
       return e.clientY <= sibling.offsetTop+sibling.offsetHeight / 2;
 
     });
+     // Sürüklenen öğeyi, bulunan hedef öğeden önce yerleştirir.
     sortableList.insertBefore(draggingItem,nextSibling);
 }
 

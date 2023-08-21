@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    display:flex;
+body {
+    display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     min-height: 100vh;
     background: #065f46;
 }
 
-.sortable-list{
+.sortable-list {
     background: #ecfdf5;
     width: 445px;
     border-radius: 6px;
     padding: 30px 25px 20px;
 }
 
-.sortable-list .item{
+.sortable-list .item {
     list-style: none;
     display: flex;
     margin-bottom: 11px;
@@ -31,15 +31,16 @@ body{
     align-items: center;
     justify-content: space-between;
     border: 1px solid #ccc;
-   
+
     cursor: pointer;
 }
 
-.item .details{
+.item .details {
     display: flex;
     align-items: center;
 }
-.item .details img{
+
+.item .details img {
     width: 43px;
     height: 43px;
     margin-right: 12px;
@@ -47,6 +48,13 @@ body{
     border-radius: 50%;
 }
 
-.item.dragging :where(.details, i){
-opacity: 0;
+.item.dragging :where(.details, i) {
+    opacity: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .sortable-list {
+        width: 300px;
+    }
+
 }
